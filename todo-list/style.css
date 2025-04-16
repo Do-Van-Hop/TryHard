@@ -1,0 +1,113 @@
+body{
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-container{
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    background-color: #ffedc6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#main-title{
+    text-align: center;
+    padding: 20px;
+    margin:0;
+    font-family: monospace;
+    font-size: 36px;
+}
+
+.content{
+    max-width: 500px;
+    height: auto;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px dashed #d9ae50;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.todo-list li{
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 15px;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    justify-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+input{
+    margin: 0 10px;
+    transform: scale(1.2);
+}
+
+.important{
+    border-left: 3px solid red;
+}
+
+.important input{
+    margin-left: 7px;
+}
+
+.morning {
+    background-color: #f9f9f9;
+}
+
+.afternoon {
+    background-color: #f0f7ff;
+}
+
+.evening {
+    background-color: #e8f4f8;
+}
+
+.note[data-type="reminder"] {
+    text-align: center;
+    font-style: italic;
+    color: #0c8b3ba4;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.todo-list li:hover {
+    background-color: #ebf5fb;
+    transform: translateX(5px);
+}
+
+input[type="checkbox"]:checked + label {
+    color: #95a5a6;
+    text-decoration: line-through;
+}
+
+.todo-list li:hover::after {
+    content: " ✅";
+    margin-left: 5px;
+    color: #2ecc71;
+}
+
+li:nth-child(odd){
+    background-color: #f2f2f2;
+}
